@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<center>
+    <div class="recipe">
+        <div class="row">
+            {% for item in recipe %}
+                <div class="col-4">
+                    <img src="{{ item['image'] }}" width="400px">
+                    <a href="{{ item['url'] }}"> <p> {{ item["url"] }} </p> </a>
+                    <h4> {{ item["name"] }} </h4>
+                    <p> Serving size: {{ item["servings"] }} </p>
+                    <p> Calories: {{ item["calories"] }} </p>
+                </div>
+                <br>
+            {%endfor%}
+        </div>
+    </div>
+</center>
+
+{% endblock %}

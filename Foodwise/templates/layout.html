@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title> FOODWISE </title>
+    <link rel="icon" href="static/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/style.css') }}"/></head>
+    <style>
+        body {
+            font-family: 'Merienda';
+            font-size: 22px;
+        }
+    </style>
+    
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="{{ url_for('index') }}"><img src="static/img/logo1.png" width="auto" height="100px"></a>
+                </div>
+                <div class="topnav">
+                    <ul id="MenuItems">
+                        <li><a href="{{ url_for('index') }}">HOME</a></li>
+                        <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                        <li><a href="{{ url_for('recipe') }}">RECIPES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </div>
+
+</div>
+    <script src="static/main.js"></script>
+</div>
+
+</body>
+</html>

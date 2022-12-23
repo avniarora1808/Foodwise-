@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="recipe-container">
+        <div class="recipe-btns">
+            <a class="btn" id="coll1">Photo Detection</a>
+            <a class="btn" id="coll2">Manual Input</a>
+            <a class="btn" id="coll3">Paragraph Input</a>
+        </div>
+        <div class="collapse" id="collapse1">
+            <form method="POST" action="/predict" enctype="multipart/form-data" class="centered-form">
+                <input type="file" name="file" id="photo-detection-input" onchange="readURL(this);" >
+                <img id="showimg" src="#" alt="img" />
+                <button type="submit" class="recipe-submit btn">Submit</button>
+            </form>
+        </div>
+        <div class="collapse" id="collapse2">
+            <form method="POST" id="manualInput" action="/recipe">
+                <div class="form-input">
+                    <p>Ingredient #1:</p>
+                    <input type="text" name="1">
+                </div>
+                <div class="form-input">
+                    <p>Ingredient #2:</p>
+                    <input type="text" name="2">
+                </div>
+                <div class="form-input">
+                    <p>Ingredient #3:</p>
+                    <input type="text" name="3">
+                </div>
+                <div class="form-input">
+                    <p>Ingredient #4:</p>
+                    <input type="text" name="4">
+                </div>
+                <div class="form-input">
+                    <p>Ingredient #5:</p>
+                    <input type="text" name="5">
+                </div>
+                <button type="submit" class="recipe-submit btn">Submit</button>
+            </form>
+        </div>
+        <div class="collapse" id="collapse3">
+            <form method="POST" id="manualInput" action="/nlp" class="centered-form">
+                <textarea name="paragraph_text" cols="50" rows="10" id="para-input"></textarea>
+                <br>
+                <button type="submit" class="recipe-submit btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+        <script src="static/recipe.js"></script>
+    </div>
+{% endblock %}
+

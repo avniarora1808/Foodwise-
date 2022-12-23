@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="center-in-div predict">
+        <h1 id="predict-p">Confirm Searched Ingredients</h1>
+        <p class="ingredients">1. {{ in1 }}</p>
+        <p class="ingredients">2. {{ in2 }}</p>
+        <p class="ingredients">3. {{ in3 }}</p>
+        <p class="ingredients">4. {{ in4 }}</p>
+        <p class="ingredients">5. {{ in5 }}</p>
+        <a href="{{ url_for('results2') }}" class="recipe-submit btn">Continue</a>
+    </div>
+{% endblock %}

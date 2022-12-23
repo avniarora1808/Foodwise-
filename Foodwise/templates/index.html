@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="container2">
+        <div class="row">
+            <div class="col-2">
+                <span style="font-size: 60px;" class="txt-type" data-wait="3000" data-words='["FOODWISE"]'></span>
+                <p>EAT WISE, SAVE YOUR CRIES </p>
+                <a href="{{ url_for('recipe') }}" class="btn">CREATE</a>
+            </div>
+            <div class ="col-2">
+                <!--slideshow container-->
+                <div class="slideshow-container">
+                    <!-- full-width images with number and caption text-->
+                    <div class="mySlides fade">
+                        <img src="static/img/home1.jpg" style="width:100%">
+                    </div>
+                    
+                    <div class = "mySlides fade">
+                        <img src="static/img/home2.jpeg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="static/img/home3.jpeg" style="width:100%">
+                    </div>
+            
+                </div>
+                
+                <!--dots/circles-->
+                <div style="text-align:center" class="slideshow-dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                
+            </div>
+        </div> 
+    </section>
+    </div>  
+
+{% endblock %}
